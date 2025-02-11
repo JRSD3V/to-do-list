@@ -1,0 +1,159 @@
+:root {
+    --black: #000;
+    --black-100: #0a0a0a;
+    --black-200: #222;
+    --white: #fff;
+    --theme: #00ff00;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", serif;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: "Inter", serif;
+}
+
+header {
+    text-align: center;
+    margin: 3rem auto;
+}
+
+#form {
+    margin: 1rem auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    max-width: 1200px;
+}
+
+#form input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+    background-color: var(--black);
+    color: var(--white);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid var(--white);
+}
+
+#form input:hover, #form input:focus {
+    border-color: var(--theme);
+}
+
+#form input:focus {
+    outline: none;
+
+}
+
+#form button {
+    height: 50px;
+    width: 25%;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid var(--white);
+    border-left: none;
+    color: var(--white);
+}
+
+#form button:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#form button:hover {
+    border-color: var(--theme);
+    color: var(--theme);
+}
+
+#todos {
+    width: 95%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    list-style-type: none;
+    border-radius: 5px;
+    height: 500px;
+    overflow-y: overlay;
+}
+
+/* Customizing the scrollbar for webkit browsers in dark mode */
+#todos::-webkit-scrollbar {
+    width: 7px;
+}
+
+#todos::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+#todos::-webkit-scrollbar-thumb {
+    background: #5c5c5c; /* Medium gray for the thumb */
+    border-radius: 10px;
+}
+
+#todos::-webkit-scrollbar-thumb:hover {
+    background: #7a7a7a; /* Slightly lighter gray on hover */
+}
+
+/* Assuming you have an 'X' logo or icon that fits the dark theme */
+#todos::-webkit-scrollbar-thumb {
+    background-image: url('path-to-dark-x-logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#todo {
+    width: 100%;
+    background-color: var(--black-100);
+    height: 60px;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.15rem;
+}
+
+#todo span {
+    margin-left: 1rem;
+}
+
+#todo button {
+    height: 100%;
+    width: 10%;
+    min-width: 50px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-left: 1px solid var(--black);
+}
+
+#todoText {
+    pointer-events: none;
+}
+
+.checked span {
+    text-decoration: line-through;
+    color: var(--theme);
+}
+
+.note {
+    text-align: center;
+}
