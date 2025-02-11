@@ -4,6 +4,13 @@ const clearBtn = document.getElementById("clearBtn");
 const todos = document.getElementById("todos");
 const note = document.querySelector(".note");
 
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js')
+        .then(() => console.log("Service Worker Registered"))
+        .catch((err) => console.log("Service Worker Failed", err));
+}
+
+
 form.addEventListener("submit", (e)=> {
     e.preventDefault();
     let todoObj = {
